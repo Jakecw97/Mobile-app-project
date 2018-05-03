@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WorkoutServiceProvider } from '../../providers/workout-service/workout-service';
 import { Workout } from '../../models/workout.model';
 
+
 /**
  * Generated class for the ViewWorkoutPage page.
  *

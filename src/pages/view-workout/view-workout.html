@@ -19,12 +19,12 @@
     <ion-card-title>
       {{ workout.title }}
     </ion-card-title>
-    <div class="note-date">{{ note.date }}</div>
+   <div class="workout-date">{{ workout.date }}</div>
     <hr />
-    <div>{{ note.content }}</div>
+    <div>{{ workout.content }}</div>
    </ion-card-content>
  </ion-card>
 </ion-content>
 <ion-footer>
-    <button ion-button color="red" block (click)="deleteNote(note.createDate)">Erase Workout </button>
+    <button ion-button color="red" block (click)="eraseWorkout(workout.createDate)">Erase Workout </button>
 </ion-footer>
