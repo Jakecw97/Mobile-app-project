@@ -14,12 +14,25 @@
 
 
 <ion-content padding>
-<form (ngSubmit)="saveWorkout(f.value)" #f="ngForm">
-  <ion-item>
+<form [formGroup]="formGroup" (ngSubmit)="saveWorkout(formGroup.value)" ><!--Form group helps to organise data for the model/local storage-->
+      <ion-item>
+          <ion-label> Date </ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" formContolName="date"></ion-datetime>
+            </ion-item>
+
+    <ion-item>
     <ion-label> Title </ion-label>
-      <ion-input name="title" ngModel>
+      <ion-input type="text" name="title" ngModel formControlName="title" required>
       </ion-input>
+      <div class="alert" *ngIf="!formGroup.controls['title'].valid && formGroup.controls['title'].touched">{{ titleAlert }}</div> <!-- Input Validation, alert is shown if input is invalid, in this case blank-->
       </ion-item>
-      <button ion-button typer="submit">Save Note</button>
+      
+      <ion-item>
+          <ion-label> Exercises: </ion-label>
+            <ion-input type="text" name="content" ngModel formControlName="content" required>
+            </ion-input>
+            <div class="alert" *ngIf="!formGroup.controls['content'].valid && formGroup.controls['content'].touched">{{ contentAlert }}</div> <!-- Input Validation, alert is shown if input is invalid, in this case blank-->
+            </ion-item>
+      <button ion-button type="submit" [disabled]="!formGroup.valid">Save Workout</button> <!--Prevents the user from saving if formGroup is not entered correctly-->
 </form>
 </ion-content>

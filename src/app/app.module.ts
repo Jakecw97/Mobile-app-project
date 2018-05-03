@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddWorkoutPage } from '../pages/add-workout/add-workout';
 import { WorkoutServiceProvider } from '../providers/workout-service/workout-service';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,9 @@ import { WorkoutServiceProvider } from '../providers/workout-service/workout-ser
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
