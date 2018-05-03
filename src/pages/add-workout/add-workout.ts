@@ -21,9 +21,9 @@ export class AddWorkoutPage {
   formGroup: FormGroup;
   workout: Workout;
   date: Date = new Date();
-  title: string = '';
-  content: string = '';
-  
+  title: string = "";
+  content: string = "";
+
   constructor(public navCtrl: NavController, private workoutService: WorkoutServiceProvider) {
     this.formGroup = new FormGroup({
       title: new FormControl(),

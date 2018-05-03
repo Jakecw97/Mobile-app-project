@@ -20,7 +20,7 @@ export class WorkoutServiceProvider {
   }//saveWorkout end
   
   getAllWorkouts(){
-   return this.storage.get('notes').then(
+   return this.storage.get('workouts').then(
      (workouts) => {
        this.workouts = workouts == null ? [] : workouts; //if workouts local storage is empty, display an empty array
        return[...this.workouts];//returns local storage as an array
