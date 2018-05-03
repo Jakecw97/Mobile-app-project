@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Workout } from '../../models/workout.model';
-
 /*
   Generated class for the WorkoutServiceProvider provider.
 
@@ -16,7 +15,7 @@ export class WorkoutServiceProvider {
   }
   saveWorkout(workout: Workout){
     workout.createDate = Date.now();
-    this.workouts.push(workout); //pushes onto the array
+    this.workouts.push(workout);
     this.storage.set('workouts',this.workouts)
   }//saveWorkout end
   
