@@ -14,14 +14,14 @@
 
 
 <ion-content padding>
-<form [formGroup]="formGroup" (ngSubmit)="saveWorkout(formGroup.value)" ><!--Form group helps to organise data for the model/local storage-->
+<form [formGroup]="formGroup"  (ngSubmit)="saveWorkout(formGroup.value)" ><!--Form group helps to organise data for the model/local storage-->
       <ion-item>
           <ion-label> Date </ion-label>
           <ion-datetime displayFormat="DD/MM/YYYY" formContolName="date"></ion-datetime>
             </ion-item>
 
     <ion-item>
-    <ion-label> Title </ion-label>
+    <ion-label> Title: </ion-label>
       <ion-input type="text" name="title" ngModel formControlName="title" required>
       </ion-input>
       <div class="alert" *ngIf="!formGroup.controls['title'].valid && formGroup.controls['title'].touched">{{ titleAlert }}</div> <!-- Input Validation, alert is shown if input is invalid, in this case blank-->

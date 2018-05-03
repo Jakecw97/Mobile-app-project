@@ -7,10 +7,10 @@
 </ion-header>
 
 <ion-content padding>
- <!-- <ion-list>
-    <button ion-item *ngFor="let workout of workouts | async"> <!--ngFor to loop through and display all the workouts, async returns result of the promise
-      {{ workout.title }}
+  <ion-list>
+    <button ion-item ngFor="let workout of workouts | async"> <!--ngFor to loop through and display all the workouts, async returns result of the promise-->
+      {{ workouts.title }}
       </button>
-  </ion-list>!-->
+  </ion-list>
  <button ion-button (click)="addWorkout()">Add Workout</button>
 </ion-content>
