@@ -11,6 +11,7 @@ import { Workout } from '../../models/workout.model';
 @Injectable()
 export class WorkoutServiceProvider {
   private workouts: Workout[] = [];
+  private workout: Workout;
   constructor(public storage: Storage) {
   }
   saveWorkout(workout: Workout){
@@ -27,4 +28,17 @@ export class WorkoutServiceProvider {
      }
    )
   }//getAllWorkouts end
+  
+  getWorkout(createDate: number){
+    return this.storage.get('workouts').then((workouts) => {
+      this.workout = [...workouts].find(r => r.createDate === createDate);
+      return this.workout;
+    });
+  }//getworkout
+  eraseWorkout(createDate: number){
+    this.workouts = this.workouts.filter((note) =>{
+      return note.createDate !== createDate
+    });
+    this.storage.set('notes', this.workouts);
+  }//eraseWorkout
 }

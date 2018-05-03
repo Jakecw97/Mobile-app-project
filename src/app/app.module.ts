@@ -10,13 +10,15 @@ import { HomePage } from '../pages/home/home';
 import { AddWorkoutPage } from '../pages/add-workout/add-workout';
 import { WorkoutServiceProvider } from '../providers/workout-service/workout-service';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ViewWorkoutPage } from '../pages/view-workout/view-workout';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    AddWorkoutPage
+    AddWorkoutPage,
+    ViewWorkoutPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
   entryComponents: [
     MyApp,
     HomePage,
-    AddWorkoutPage
+    AddWorkoutPage,
+    ViewWorkoutPage
   ],
   providers: [
     StatusBar,
