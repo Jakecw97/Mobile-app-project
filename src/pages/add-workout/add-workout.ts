@@ -21,7 +21,7 @@ export class AddWorkoutPage {
 
 saveWorkout(value: {title: string})
 {
-
-}//save workout end
+ this.workoutService.saveWorkout(value);
+}//saveWorkout end
 
 }
