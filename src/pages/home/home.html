@@ -7,5 +7,10 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let workout of workouts"> <!--ngFor to loop through and display all the workouts-->
+      {{ workout.title}}
+      </button>
+  </ion-list>
  <button ion-button (click)="addWorkout()">Add Workout</button>
 </ion-content>

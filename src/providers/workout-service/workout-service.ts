@@ -10,7 +10,7 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class WorkoutServiceProvider {
   private workouts: {title: string}[] = [];
-  constructor(public http: HttpClient) {
+  constructor() {
   }
   saveWorkout(workout: {title: string}){
     this.workouts.push(workout);

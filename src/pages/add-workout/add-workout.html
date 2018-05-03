@@ -14,12 +14,12 @@
 
 
 <ion-content padding>
-<form (ngSubmit)="addWorkout(f.value)" #f="ngForm">
+<form (ngSubmit)="saveWorkout(f.value)" #f="ngForm">
   <ion-item>
     <ion-label> Title </ion-label>
       <ion-input name="title" ngModel>
       </ion-input>
+      </ion-item>
       <button ion-button typer="submit">Save Note</button>
-  </ion-item>
 </form>
 </ion-content>
