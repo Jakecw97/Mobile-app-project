@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ViewWorkoutPage } from '../pages/view-workout/view-workout';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ExerciseSearchPage } from '../pages/exercise-search/exercise-search';
+import { InAppBrowser } from '@ionic-native/in-app-browser'
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ExerciseSearchPage } from '../pages/exercise-search/exercise-search';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WorkoutServiceProvider
+    WorkoutServiceProvider,
+    InAppBrowser
   ]
 })
 export class AppModule {}
