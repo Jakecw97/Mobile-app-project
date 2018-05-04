@@ -11,6 +11,8 @@ import { AddWorkoutPage } from '../pages/add-workout/add-workout';
 import { WorkoutServiceProvider } from '../providers/workout-service/workout-service';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ViewWorkoutPage } from '../pages/view-workout/view-workout';
+import { TabsPage } from '../pages/tabs/tabs';
+import { ExerciseSearchPage } from '../pages/exercise-search/exercise-search';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ViewWorkoutPage } from '../pages/view-workout/view-workout';
     MyApp,
     HomePage,
     AddWorkoutPage,
-    ViewWorkoutPage
+    ViewWorkoutPage,
+    ExerciseSearchPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import { ViewWorkoutPage } from '../pages/view-workout/view-workout';
     MyApp,
     HomePage,
     AddWorkoutPage,
-    ViewWorkoutPage
+    ViewWorkoutPage,
+    ExerciseSearchPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
