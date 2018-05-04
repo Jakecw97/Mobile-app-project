@@ -9,7 +9,7 @@
 <ion-content padding>
  <ion-list>
     <button ion-item *ngFor="let workout of workouts | async" (click)="getWorkout(workout.createDate)"> <!--ngFor to loop through and display all the workouts, async returns result of the promise!-->
-      {{ workout.title}}
+      <span class="date"> {{workout.date}}</span>  {{ workout.title}}
       </button>
   </ion-list>
  <button ion-button (click)="addWorkout()">Add Workout</button>
