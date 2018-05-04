@@ -36,9 +36,9 @@ export class WorkoutServiceProvider {
     });
   }//getworkout
   eraseWorkout(createDate: number){
-    this.workouts = this.workouts.filter((note) =>{
-      return note.createDate !== createDate
+    this.workouts = this.workouts.filter((workout) =>{
+      return this.workout.createDate !== createDate
     });
-    this.storage.set('notes', this.workouts);
+    this.storage.set('workouts', this.workouts);
   }//eraseWorkout
 }
