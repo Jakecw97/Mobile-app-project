@@ -17,7 +17,7 @@
 <form [formGroup]="formGroup" (ngSubmit)="saveWorkout(formGroup.value)" ><!--Form group helps to organise data for the model/local storage-->
      <ion-item>
           <ion-label> Date: </ion-label>
-          <ion-input type="date" name="date" ngModel formControlName="date" >
+          <ion-input type="date" name="date" ngModel formControlName="date" required>
           </ion-input>
           </ion-item>
 

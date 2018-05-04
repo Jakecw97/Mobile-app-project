@@ -22,6 +22,7 @@ workout: Workout;
     this.workout = this.navParams.get('workout'); //selecting a workout with nav params, saves it to this method
   }
 
+
   eraseWorkout(createDate: number){
     this.workoutService.eraseWorkout(createDate);
     this.navCtrl.pop();

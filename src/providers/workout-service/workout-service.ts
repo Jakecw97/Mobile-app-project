@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Workout } from '../../models/workout.model';
+
 /*
   Generated class for the WorkoutServiceProvider provider.
 
@@ -35,6 +36,8 @@ export class WorkoutServiceProvider {
       return this.workout;
     });
   }//getworkout
+
+ 
   eraseWorkout(createDate: number){
     this.workouts = this.workouts.filter((workout) =>{
       return workout.createDate !== createDate
