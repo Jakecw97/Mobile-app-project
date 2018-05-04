@@ -31,13 +31,13 @@ export class WorkoutServiceProvider {
   
   getWorkout(createDate: number){
     return this.storage.get('workouts').then((workouts) => {
-      this.workout = [...workouts].find(r => r.createDate === createDate);
+      this.workout = [...workouts].find(r => r.createDate === createDate); //find workout selected, using it's createDate var
       return this.workout;
     });
   }//getworkout
   eraseWorkout(createDate: number){
     this.workouts = this.workouts.filter((workout) =>{
-      return this.workout.createDate !== createDate
+      return workout.createDate !== createDate
     });
     this.storage.set('workouts', this.workouts);
   }//eraseWorkout
