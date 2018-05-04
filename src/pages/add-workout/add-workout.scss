@@ -19,4 +19,13 @@ page-add-workout {
     .toolbar-title{
         color:#3082A4
     }
+    .item-md {
+        color: white;
+        background-color:rgba(173, 181, 187, 0.471);
+    }
+    .item-input .label-md,
+    .item-select .label-md,
+    .item-datetime .label-md {
+        color: #49C6E8;
+    }
 }
